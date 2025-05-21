@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .botao {
+    background: #e63946;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  /* Banner */
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .banner-content {
+    max-width: 500px;
+  }
+  
+  .banner-img {
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  /* Cardápio */
+  .cardapio {
+    background: #f9f9f9;
+    padding: 40px 20px;
+  }
+  
+  .cardapio .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  aside ul {
+    list-style: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  aside ul li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-lista {
+    flex: 1;
+  }
+  
+  .menu-lista img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  /* Rodapé */
+  footer {
+    background: #8b0000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer .redes a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .copy {
+    margin-top: 10px;
+    font-size: 0.9em;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cardapio .container {
+      flex-direction: column;
+    }
+  
+    header .container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
