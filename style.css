@@ -63,6 +63,7 @@ img {
 
 /* --- Header --- */
 header {
+    color: #c8371a;
     background-color: var(--dark-bg); /* Match prototype header */
     padding: 1rem 0;
     border-bottom: 2px solid var(--primary-color);
@@ -72,6 +73,7 @@ header {
 }
 
 .header-content {
+    color: #c8371a;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +92,7 @@ header nav ul li {
     margin-left: 25px;
 }
 
-header nav ul li a {
+header nav ul li  {
     color: var(--text-light);
     font-weight: bold;
     text-transform: uppercase;
