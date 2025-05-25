@@ -1,154 +1,462 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #c8371a; /* Deep red from prototype header */
+    --secondary-color: #e67e22; /* Orange from logo/prototype accents */
+    --dark-bg: #2c0801; /* Very dark brown/red for backgrounds */
+    --text-light: #fdf0e0; /* Light cream text */
+    --text-dark: #333;
+    --font-headings: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Arial', 'Helvetica Neue', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
     line-height: 1.6;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-  }
-  
-  /* Header */
-  header {
-    background: #000;
-    color: #fff;
-    padding: 10px 0;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem; /* Spacing for sections */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--dark-bg); /* Match prototype header */
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  header .container {
+}
+
+.header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-  }
-  
-  header nav ul {
+    align-items: center;
+}
+
+.logo {
+    height: 60px; /* Adjust as needed */
+}
+
+header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-  }
-  
-  header nav a {
-    color: white;
-    text-decoration: none;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--text-light);
     font-weight: bold;
-  }
-  
-  .botao {
-    background: #e63946;
-    color: #fff;
-    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--secondary-color);
+}
+
+.header-phone-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
     border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  /* Banner */
-  .banner {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.header-phone-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    background-color: #4a1a0a; /* Darker red/brown background for contrast */
+    padding: 4rem 0;
+    color: var(--text-light);
+}
+
+.hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: #111;
-    color: white;
-    padding: 40px 20px;
-    flex-wrap: wrap;
-  }
-  
-  .banner-content {
-    max-width: 500px;
-  }
-  
-  .banner-img {
-    max-width: 400px;
-    border-radius: 10px;
-  }
-  
-  /* Cardápio */
-  .cardapio {
-    background: #f9f9f9;
-    padding: 40px 20px;
-  }
-  
-  .cardapio .container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  
-  aside ul {
-    list-style: none;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  aside ul li {
-    margin-bottom: 10px;
-  }
-  
-  .menu-lista {
+    gap: 2rem;
+}
+
+.hero-text {
     flex: 1;
-  }
-  
-  .menu-lista img {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px 0;
-    border-radius: 8px;
-  }
-  
-  /* Rodapé */
-  footer {
-    background: #8b0000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer .redes a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
+}
+
+.hero-text h1 {
+    color: var(--text-light); /* Overriding default h1 color for hero */
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
     display: inline-block;
-    margin-top: 10px;
-  }
-  
-  .copy {
-    margin-top: 10px;
-    font-size: 0.9em;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .banner {
-      flex-direction: column;
-      text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center; /* Or right */
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px; /* Optional */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Cardápio (Menu) Section --- */
+#cardapio {
+    padding: 3rem 0;
+    position: relative; /* For background image */
+    background-color: rgba(0, 0, 0, 0.3); /* Slight overlay if background makes text hard to read */
+}
+
+.menu-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind content */
+    overflow: hidden; /* Ensures image doesn't break layout */
+}
+
+.menu-background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area, might crop */
+    opacity: 0.2; /* Make it subtle */
+}
+
+#cardapio h2 {
+    color: var(--text-light);
+}
+
+.menu-wrapper {
+    display: flex;
+    gap: 2rem;
+    background-color: rgba(44, 8, 1, 0.8); /* Semi-transparent dark red from prototype */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.menu-categories {
+    flex-basis: 25%;
+}
+
+.menu-categories ul {
+    list-style: none;
+}
+
+.menu-categories li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: rgba(0,0,0,0.2);
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.menu-categories li:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-bg);
+}
+
+.menu-categories li.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-left: 4px solid var(--secondary-color);
+    font-weight: bold;
+}
+
+.menu-items-display {
+    flex-basis: 75%;
+}
+
+.menu-item {
+    background-color: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    display: flex; /* For layout of text and image */
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.menu-item-image {
+    flex-basis: 120px; /* Fixed width for small polaroid-style images */
+    flex-shrink: 0;
+}
+.menu-item-image img {
+    width: 100%;
+    border-radius: 4px; /* For the polaroid style */
+    border: 3px solid white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+/* Style for images that are not polaroids */
+.menu-item-image.full img {
+    border: none;
+    box-shadow: none;
+}
+
+
+.menu-item-details {
+    flex-grow: 1;
+}
+
+.menu-item h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-bottom: 0;
+}
+
+/* --- Info Section (A Pizzaria) --- */
+.info-section {
+    padding: 3rem 0;
+    background-color: #3a1005; /* Slightly different dark shade */
+}
+.info-section h2 {
+    color: var(--text-light);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color); /* Red from prototype footer */
+    color: var(--text-light);
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-block {
+    flex: 1; /* Each block tries to take equal space */
+    min-width: 250px; /* Minimum width before wrapping */
+    text-align: left;
+}
+
+.info-block h4 {
+    font-family: var(--font-headings);
+    color: var(--text-light);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.3rem;
+    display: inline-block;
+}
+
+.info-block p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.social-icons {
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.8rem; /* Adjust icon size */
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+.social-icons a .ifood-icon img{
+    filter: brightness(0) invert(1); /* Make iFood logo white */
+    height: 28px; /* Adjust as needed */
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+.social-icons a:hover .ifood-icon img{
+     filter: invert(59%) sepia(81%) saturate(533%) hue-rotate(346deg) brightness(90%) contrast(93%); /* Attempt to color iFood orange on hover */
+}
+
+
+.copyright {
+    background-color: rgba(0,0,0,0.2); /* Darker strip for copyright */
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
     }
-  
-    .cardapio .container {
-      flex-direction: column;
+    .hero-text {
+        margin-bottom: 2rem;
     }
-  
-    header .container {
-      flex-direction: column;
-      gap: 10px;
+    .menu-wrapper {
+        flex-direction: column;
     }
-  
+    .menu-categories {
+        flex-basis: auto;
+        margin-bottom: 1.5rem;
+    }
+    .menu-categories ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .menu-categories li {
+        flex-grow: 1; /* Categories take available space */
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    .menu-categories li.active {
+        border-left: none;
+        border-bottom: 4px solid var(--secondary-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
     header nav ul {
-      flex-direction: column;
-      align-items: center;
+        padding-left: 0;
+        justify-content: center;
     }
-  }
-  
+    header nav ul li {
+        margin: 0 10px;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .menu-item {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        text-align: center;
+    }
+    .menu-item-image {
+        margin-bottom: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-block {
+        text-align: center;
+        width: 100%;
+    }
+    .info-block h4 {
+        display: block; /* Center heading */
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 50px;
+    }
+    header nav ul li a {
+        font-size: 0.8rem;
+    }
+    .btn-primary, .header-phone-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+     .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    .social-icons a .ifood-icon img{
+        height: 24px;
+    }
+}

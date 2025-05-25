@@ -1,79 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.png" type="image/png">
+    <title>Dona Larica Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Dona Larica</title>
 </head>
 <body>
-  
-  <!-- Menu -->
-  <header>
-    <div class="container">
-      <img src="img/logo.png" alt="Logo Pizzaria" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="#sobre">A Pizzaria</a></li>
-          <li><a href="#cardapio">Cardápio</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-      <a href="#pedido" class="botao">Pedir</a>
-    </div>
-  </header>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo-link">
+                <img src="img/logo.png" alt="Dona Larica Pizzaria Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#pizzaria">A Pizzaria</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+5511999999999" class="header-phone-button">LIGUE AGORA</a>
+        </div>
+    </header>
 
-  <!-- Banner -->
-  <section class="banner">
-    <div class="banner-content">
-      <h1>Feita com amor e ingredientes selecionados</h1>
-      <p>Experimente a melhor pizza da cidade!</p>
-      <a href="#cardapio" class="botao">Ver Cardápio</a>
-    </div>
-    <img src="img/pizzalonga.jpg" alt="Pizza deliciosa" class="banner-img" />
-  </section>
+    <main>
+        <section id="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Sabor e tradição que <br>aquecem o coração!</h1>
+                    <p>Saboreie a autêntica pizza artesanal, preparada com ingredientes frescos e selecionados. Uma experiência única que une a tradição da culinária italiana com o carinho da Dona Larica.</p>
+                    <a href="#cardapio" class="btn-primary">NOSSO CARDÁPIO</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/primeiraimg.jpg" alt="Pizza deliciosa">
+                </div>
+            </div>
+        </section>
 
-  <!-- Cardápio -->
-  <section id="cardapio" class="cardapio">
-    <div class="container">
-      <aside>
-        <ul>
-          <li><a href="#">Pizzas Tradicionais</a></li>
-          <li><a href="#">Pizzas Especiais</a></li>
-          <li><a href="#">Pizzas Doces</a></li>
-          <li><a href="#">Bebidas</a></li>
-        </ul>
-      </aside>
-      <div class="menu-lista">
-        <h2>Portuguesa</h2>
-        <p>Molho de tomate, mussarela, presunto, ovos e cebola.</p>
-        <img src="img/pizzapequena1.jpg" alt="Pizza Portuguesa" />
-        <h2>Marguerita</h2>
-        <p>Molho de tomate, mussarela, tomate e manjericão.</p>
-        <img src="img/pizzapequena2.jpg" alt="Pizza Marguerita" />
-      </div>
-    </div>
-  </section>
+        <section id="cardapio">
+            <div class="menu-background-image">
+                <img src="img/pizzalonga.jpg" alt="Forno de pizza">
+            </div>
+            <div class="container">
+                <h2>CONHEÇA NOSSO CARDÁPIO</h2>
+                <div class="menu-wrapper">
+                    <aside class="menu-categories">
+                        <ul>
+                            <li data-category="tradicionais" class="active">Pizzas Tradicionais</li>
+                            <li data-category="especiais">Pizzas Especiais</li>
+                            <li data-category="doces">Pizzas Doces</li>
+                            <li data-category="bebidas">Bebidas</li>
+                        </ul>
+                    </aside>
+                    <section class="menu-items-display">
+                        </section>
+                </div>
+            </div>
+        </section>
 
-  <!-- Rodapé -->
-  <footer id="contato">
-    <div class="container">
-      <p>Endereço: Rua da Pizza, 123 - Centro, São Paulo - SP</p>
-      <p>Horário: Segunda a domingo, das 18h às 23h</p>
-      <div class="redes">
-        <a href="https://instagram.com/seuusuario" target="_blank">Instagram</a>
-        <a href="tel:+5511999999999">Telefone</a>
-        <a href="https://www.ifood.com.br" target="_blank">iFood</a>
-      </div>
-    </div>
-    <div class="copy">
-      <p>&copy; 2025 Pizzaria Delícia | <a href="#">Política de Privacidade</a></p>
-    </div>
-  </footer>
-</body>
-</html>
+        <section id="pizzaria" class="info-section">
+            <div class="container">
+                <h2>A PIZZARIA DONA LARICA</h2>
+                <p>Desde 1999, a Dona Larica Pizzaria se dedica a criar momentos deliciosos para você e sua família. Nossas pizzas são feitas com massa de fermentação natural, molho de tomate caseiro e os ingredientes mais frescos, assadas em forno a lenha para garantir aquele sabor inconfundível. Venha nos conhecer e se apaixonar!</p>
+                </div>
+        </section>
 
+    </main>
+
+    <footer id="contato">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="info-block">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Segunda: 18:00 às 00:00</p>
+                    <p>Terça a Quinta: 18:00 às 23:30</p>
+                    <p>Sexta e Sábado: 18:00 às 00:30</p>
+                    <p>Domingo: 18:00 às 23:30</p>
+                </div>
+                <div class="info-block">
+                    <h4>Endereço</h4>
+                    <p>Rua da Pizza Deliciosa, 123</p>
+                    <p>Vila Saborosa - Cidade/UF</p>
+                    <p>CEP: 00000-000</p>
+                </div>
+                <div class="info-block">
+                    <h4>Peça Agora!</h4>
+                    <p>Disk Delivery: (XX) XXXX-XXXX</p>
+                    <p>WhatsApp: (XX) XXXXX-XXXX</p>
+                    <p>iFood: Procure por Dona Larica</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="tel:+5511999999999" aria-label="Telefone"><i class="fas fa-phone"></i></a>
+                <a href="#" aria-label="iFood" class="ifood-icon">
+                    <img src="https://static-images.ifood.com.br/webapp/images/logo_ifood_vermelho.svg" alt="iFood" style="height: 24px; filter: brightness(0) invert(1);">
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="currentYear"></span> Dona Larica LTDA. | Política de Privacidade | Mapa do Site</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
