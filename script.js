@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    // --- Menu Data ---
+    // Store image paths relative to your 'assets' folder
+    // If an item doesn't have a specific image, you can set it to null
+    // or use a generic placeholder image path.
     const menuData = {
         tradicionais: [
             {
                 name: "Portuguesa I",
                 description: "Mussarela, presunto cozido, calabresa, cebola e ovos cozidos.",
-                image: null 
+                image: null // Example: "assets/portuguesa1.jpg" if you have one
             },
             {
                 name: "Portuguesa II",
@@ -13,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 image: null
             },
             {
-                name: "Marguerita",
+                name: "Margherita",
                 description: "Mussarela coberta com folhas de manjericão fresco, molho de tomate especial, salpicada com parmesão.",
-                image: null 
+                image: null // Example: "assets/margherita.jpg"
             },
             {
                 name: "Napolitana",
@@ -25,33 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 name: "Calabresa",
                 description: "Calabresa fatiada de primeira qualidade, coberta com rodelas de cebola e azeitonas.",
-                image: null 
+                image: null // Example: "assets/calabresa_cebola.jpg"
             }
         ],
         especiais: [
             {
                 name: "Parma Crocante",
                 description: "Molho de tomate especial, mussarela de búfala, presunto parma crocante, lascas de parmesão e um toque de rúcula fresca.",
-                image: "img/pizzapequena1.jpg",
-                imageStyle: "polaroid" 
+                image: "img/pizzapequena1.jpg", // Your Parma image
+                imageStyle: "polaroid" // To identify for specific styling if needed
             },
             {
                 name: "Caprese Suprema",
                 description: "Molho de tomate italiano, mussarela de búfala fresca, rodelas de tomate caqui, generosas porções de pesto de manjericão artesanal e folhas de manjericão.",
-                image: "img/pizzapequena2.jpg", 
+                image: "img/pizzapequena2.jpg", // Your Caprese image
                 imageStyle: "polaroid"
             },
             {
                 name: "Quatro Queijos Especiais",
                 description: "Uma harmoniosa combinação de mussarela, provolone defumado, gorgonzola cremoso e catupiry original.",
-                image: null 
+                image: null // Example: "assets/quatro_queijos.jpg"
             }
         ],
         doces: [
             {
                 name: "Chocolate com Morango",
                 description: "Deliciosa camada de chocolate ao leite derretido, coberta com morangos frescos e chocolate granulado.",
-                image: null 
+                image: null // Example: "assets/chocolate_morango.jpg"
             },
             {
                 name: "Banana com Canela",
@@ -88,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuItemsDisplay = document.querySelector('.menu-items-display');
 
     function displayMenuItems(category) {
-        menuItemsDisplay.innerHTML = ''; 
+        menuItemsDisplay.innerHTML = ''; // Clear current items
 
         const itemsToDisplay = menuData[category];
 
@@ -124,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categoriesList.addEventListener('click', (event) => {
         if (event.target.tagName === 'LI') {
+            // Remove active class from all category items
             categoryItems.forEach(li => li.classList.remove('active'));
+            // Add active class to the clicked one
             event.target.classList.add('active');
 
             const selectedCategory = event.target.dataset.category;
@@ -132,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Smooth Scroll for Nav Links ---
     document.querySelectorAll('header nav a[href^="#"], .btn-primary[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -145,10 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Set current year in footer ---
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
+
+    // --- Initial display (e.g., first category) ---
     const initialCategory = categoriesList.querySelector('li.active')?.dataset.category || 'tradicionais';
     displayMenuItems(initialCategory);
 

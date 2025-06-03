@@ -1,9 +1,9 @@
-
+/* --- Global Styles & Variables --- */
 :root {
-    --primary-color: #c8371a; 
-    --secondary-color: #e67e22; 
-    --dark-bg: #2c0801;  brown/red 
-    --text-light: #fdf0e0;
+    --primary-color: #c8371a; /* Deep red from prototype header */
+    --secondary-color: #e67e22; /* Orange from logo/prototype accents */
+    --dark-bg: #2c0801; /* Very dark brown/red for backgrounds */
+    --text-light: #fdf0e0; /* Light cream text */
     --text-dark: #333;
     --font-headings: 'Georgia', 'Times New Roman', serif;
     --font-body: 'Arial', 'Helvetica Neue', sans-serif;
@@ -44,7 +44,7 @@ h2 {
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 2rem;
-    padding-top: 2rem; 
+    padding-top: 2rem; /* Spacing for sections */
 }
 
 p {
@@ -61,9 +61,10 @@ img {
     height: auto;
 }
 
+/* --- Header --- */
 header {
     color: #c8371a;
-    background-color: var(--dark-bg); 
+    background-color: var(--dark-bg); /* Match prototype header */
     padding: 1rem 0;
     border-bottom: 2px solid var(--primary-color);
     position: sticky;
@@ -79,7 +80,7 @@ header {
 }
 
 .logo {
-    height: 60px; 
+    height: 60px; /* Adjust as needed */
 }
 
 header nav ul {
@@ -119,8 +120,9 @@ header nav ul li a.active {
     background-color: var(--secondary-color);
 }
 
+/* --- Hero Section --- */
 #hero {
-    background-color: #4a1a0a; 
+    background-color: #4a1a0a; /* Darker red/brown background for contrast */
     padding: 4rem 0;
     color: var(--text-light);
 }
@@ -136,7 +138,7 @@ header nav ul li a.active {
 }
 
 .hero-text h1 {
-    color: var(--text-light); 
+    color: var(--text-light); /* Overriding default h1 color for hero */
 }
 
 .hero-text p {
@@ -163,19 +165,20 @@ header nav ul li a.active {
 
 .hero-image {
     flex: 1;
-    text-align: center;
+    text-align: center; /* Or right */
 }
 
 .hero-image img {
     max-width: 100%;
-    border-radius: 10px; 
+    border-radius: 10px; /* Optional */
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+/* --- Cardápio (Menu) Section --- */
 #cardapio {
     padding: 3rem 0;
-    position: relative; 
-    background-color: rgba(0, 0, 0, 0.3); 
+    position: relative; /* For background image */
+    background-color: rgba(0, 0, 0, 0.3); /* Slight overlay if background makes text hard to read */
 }
 
 .menu-background-image {
@@ -184,15 +187,16 @@ header nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    overflow: hidden; 
+    z-index: -1; /* Behind content */
+    overflow: hidden; /* Ensures image doesn't break layout */
 }
 
 .menu-background-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    opacity: 0.2; 
+    object-fit: cover; /* Cover the area, might crop */
+    opacity: 0.2; /* Make it subtle */
+}
 
 #cardapio h2 {
     color: var(--text-light);
@@ -201,7 +205,7 @@ header nav ul li a.active {
 .menu-wrapper {
     display: flex;
     gap: 2rem;
-    background-color: rgba(44, 8, 1, 0.8); 
+    background-color: rgba(44, 8, 1, 0.8); /* Semi-transparent dark red from prototype */
     padding: 2rem;
     border-radius: 8px;
 }
@@ -246,21 +250,22 @@ header nav ul li a.active {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 6px;
-    display: flex; 
+    display: flex; /* For layout of text and image */
     gap: 1.5rem;
     align-items: flex-start;
 }
 
 .menu-item-image {
-    flex-basis: 120px;
+    flex-basis: 120px; /* Fixed width for small polaroid-style images */
     flex-shrink: 0;
 }
 .menu-item-image img {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 4px; /* For the polaroid style */
     border: 3px solid white;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
+/* Style for images that are not polaroids */
 .menu-item-image.full img {
     border: none;
     box-shadow: none;
@@ -284,16 +289,18 @@ header nav ul li a.active {
     margin-bottom: 0;
 }
 
+/* --- Info Section (A Pizzaria) --- */
 .info-section {
     padding: 3rem 0;
-    background-color: #3a1005; 
+    background-color: #3a1005; /* Slightly different dark shade */
 }
 .info-section h2 {
     color: var(--text-light);
 }
 
+/* --- Footer --- */
 footer {
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color); /* Red from prototype footer */
     color: var(--text-light);
     padding-top: 3rem;
     text-align: center;
@@ -301,15 +308,15 @@ footer {
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-around;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .info-block {
-    flex: 1; 
-    min-width: 250px;
+    flex: 1; /* Each block tries to take equal space */
+    min-width: 250px; /* Minimum width before wrapping */
     text-align: left;
 }
 
@@ -334,13 +341,13 @@ footer {
 
 .social-icons a {
     color: var(--text-light);
-    font-size: 1.8rem; 
+    font-size: 1.8rem; /* Adjust icon size */
     margin: 0 0.8rem;
     transition: color 0.3s ease;
 }
 .social-icons a .ifood-icon img{
-    filter: brightness(0) invert(1); 
-    height: 28px; 
+    filter: brightness(0) invert(1); /* Make iFood logo white */
+    height: 28px; /* Adjust as needed */
     vertical-align: middle;
 }
 
@@ -348,11 +355,12 @@ footer {
     color: var(--secondary-color);
 }
 .social-icons a:hover .ifood-icon img{
-     filter: invert(59%) sepia(81%) saturate(533%) hue-rotate(346deg) brightness(90%) contrast(93%);
+     filter: invert(59%) sepia(81%) saturate(533%) hue-rotate(346deg) brightness(90%) contrast(93%); /* Attempt to color iFood orange on hover */
 }
 
 
 .copyright {
+    background-color: rgba(0,0,0,0.2); /* Darker strip for copyright */
     padding: 1rem 0;
     font-size: 0.8rem;
 }
@@ -361,6 +369,7 @@ footer {
     margin: 0;
 }
 
+/* --- Responsive Design --- */
 @media (max-width: 992px) {
     .hero-content {
         flex-direction: column;
@@ -383,7 +392,7 @@ footer {
         gap: 0.5rem;
     }
     .menu-categories li {
-        flex-grow: 1; 
+        flex-grow: 1; /* Categories take available space */
         text-align: center;
         border-left: none;
         border-bottom: 4px solid transparent;
@@ -413,7 +422,7 @@ footer {
         font-size: 1.8rem;
     }
     .menu-item {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and text */
         align-items: center;
         text-align: center;
     }
@@ -429,7 +438,7 @@ footer {
         width: 100%;
     }
     .info-block h4 {
-        display: block; 
+        display: block; /* Center heading */
         border-bottom: none;
     }
 }
